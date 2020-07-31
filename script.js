@@ -2,7 +2,6 @@ const userName = window.prompt("What is your name?");
 // const userName = 'Kostia';
 const div = document.querySelector('div');
 let counter = 0;
-let selection;
 
 if (userName == 'Kostia'){
     mainPage();
@@ -40,7 +39,9 @@ function addButtonEvents(type, event){
 
 function talkToCharacter(){
     removeButtons();
+    backToMain();
     buildCharacterPage();
+    skipButton();
 }
 
 function removeButtons(){
@@ -48,6 +49,43 @@ function removeButtons(){
     removedButtons.forEach((button) => {
         div.removeChild(button);
     });
+}
+
+function backToMain(){
+    const backButton = document.createElement('button');
+    backButton.setAttribute('id', 'backButton');
+    backButton.setAttribute('type', 'button');
+    div.appendChild(backButton);
+
+    backButton.addEventListener('click', () => {
+        div.removeChild(backButton);
+        const image = document.querySelector('img');
+        div.removeChild(image);
+        const textDiv = document.querySelector('#text');
+        div.removeChild(textDiv);
+        const skipButton = document.querySelector('#skipButton');
+        div.removeChild(skipButton);
+        const optionsDiv = document.querySelector('#options');
+        if (optionsDiv){
+            div.removeChild(optionsDiv);
+        };
+        mainPage();
+        selection = intro;
+        counter = 0;
+    });
+}
+
+function skipButton(){
+    const skipButton = document.createElement('button');
+    skipButton.setAttribute('id', 'skipButton');
+    skipButton.setAttribute('type', 'button');
+    div.appendChild(skipButton);
+    skipButton.addEventListener('click', () => skipAll(selection));
+}
+
+function skipAll(option){
+    counter = option.length - 1;
+    updateDialogue(option);
 }
 
 function buildCharacterPage(){
@@ -73,16 +111,16 @@ function buildCharacterPage(){
 
 function updateDialogue(option){
     if (counter <= option.length){
-        if (counter == option.length){
-            const image = document.querySelector('img');
-            image.setAttribute('id', 'small');
-            displayOptions();
-        } else {
-            dialogueBox.textContent = option[counter];
-            counter++;
-        };
+      dialogueBox.textContent = option[counter];
+      counter++;
+      if (counter == option.length){
+        const image = document.querySelector('img');
+        image.setAttribute('id', 'small');
+        displayOptions();
+        counter++;
+      };
     };
-}
+  }
 
 function displayOptions(){
     const optionsDiv = document.createElement('div');
@@ -156,3 +194,5 @@ const option1 = [
     'is the',
     'cutest cat',
 ];
+
+let selection = intro;

@@ -7,6 +7,10 @@ button{
     height: 50px;
 }
 
+#backButton, #skipButton{
+    height: 25px;
+}
+
 img{
     display: block;
     margin: auto;
@@ -36,6 +40,11 @@ img{
     height: 30px;
     width: 30px;
     border-radius: 50px;
+}
+
+#skipButton{
+    display: block;
+    margin: auto;
 }
 
 .options{
