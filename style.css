@@ -7,6 +7,14 @@ button{
     height: 50px;
 }
 
+.characters{
+    width: 100px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 #backButton, #skipButton{
     height: 25px;
 }
@@ -29,7 +37,8 @@ img{
 
 #dialogueBox{
     font-family: arial;
-    width: 350px;
+    background-color: white;
+    width: 50vw;
     padding: 10px;
     margin: 50px 0;
     border: solid black 2px;

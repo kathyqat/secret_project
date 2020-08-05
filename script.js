@@ -1,17 +1,100 @@
-const userName = window.prompt("What is your name?");
-// const userName = 'Kostia';
-const div = document.querySelector('div');
+const character = {
+    picture: "images/stefan2.jpg",
+    colour: 'rgba(0, 240, 12, 0.1)',
+    intro: [
+        '',
+    ],
+    option0: [
+        '',
+    ],
+    option1: [
+        '',
+    ],
+    option2: [
+        '',
+    ],
+    option3: [
+        '',
+    ],
+    option4: [
+        '',
+    ],
+};
+
+const Stefan = {
+    //#00f00c
+    picture: "images/stefan2.jpg",
+    colour: 'linear-gradient(#00f00c, white)',
+    intro: [
+        'This is Huge Jackedman, and it\'s not Chris.',
+        'I\'m also not huge.',
+        'Or jacked.',
+    ],
+    option0: [
+        'I love your genuine smile, personality and kind heart.',
+    ],
+    option1: [
+        'One of my favorite times, where I felt so much at peace was going to your place after school.',
+        'Getting snacks and watching Silicon Valley.',
+    ],
+    option2: [
+        'Always love your presence, but especially in hard times.',
+        'Because you truly listen and have empathy.',
+    ],
+    option3: [
+        
+    ],
+    option4: [
+        'I give you a perfect 5/7 score.',
+    ],
+};
+  
+const character0 = {
+    picture: "images/ragdoll.jpg",
+    intro: [
+        'Meow meow meow',
+        'Moo moo moo',
+        'Ruff ruff ruff',
+    ],
+    option0: [
+        'I love you',
+        'You love me',
+        'We are one big inting family',
+    ],
+    option1: [
+        'Pitou',
+        'is the',
+        'cutest cat',
+    ],
+};
+  
+const character1 = {
+    picture: "images/sadCat.jpg",
+    intro: ['idk', 'halp', 'pls'],
+    option0: ['hope', 'this', 'works'],
+    option1: ['I', 'never worked', 'with objects before'],
+};
+
+const profilePics = [character0.picture, character1.picture, character0.picture, character0.picture, Stefan.picture,];
+  
+let info = character0;
+let selection = info.intro;
 let counter = 1;
+
+// const userName = window.prompt("What is your name?");
+const userName = 'Kostia';
+const div = document.querySelector('div');
 
 if (userName == 'Kostia'){
     mainPage();
 } else if (userName == 'CapySloth'){
     easterEgg();
 } else {
-    alert('You are not the birthday boy I am looking for');
+    alert('You are not the birthday boy I\'m looking for');
 }
 
 function mainPage(){
+    div.style.backgroundImage = 'none';
     createCharacters(7);
     addButtonEvents('button', (e) => talkToCharacter(e.target));
 }
@@ -26,8 +109,9 @@ function createCharacters(number){
     for (let i=0; i<number; i++){
         const button = document.createElement('button');
         button.setAttribute('id', `character${i}`);
-        // button.setAttribute('class', 'characters');
+        button.setAttribute('class', 'characters');
         button.setAttribute('type', 'button');
+        button.style.backgroundImage = `url(${profilePics[i]})`;
         div.appendChild(button);
     };
 }
@@ -87,12 +171,15 @@ function skipButton(){
   
 function skipAll(option){
     counter = option.length - 1;
+    dialogueBox.textContent = option[counter];
+    counter++;
     updateDialogue(option);
 }
   
 function buildCharacterPage(character){
     checkCharacter(character);
     selection = info.intro;
+    div.style.backgroundImage = info.colour;
     
     const image = document.createElement('img');
     image.setAttribute('src', `${info.picture}`);
@@ -116,12 +203,12 @@ function buildCharacterPage(character){
   
 function updateDialogue(option){
     if (counter <= option.length){
-        dialogueBox.textContent = option[counter];
-        counter++;
         if (counter == option.length){
             const image = document.querySelector('img');
             image.setAttribute('id', 'small');
             displayOptions();
+        } else {
+            dialogueBox.textContent = option[counter];
             counter++;
         };
     };
@@ -151,11 +238,10 @@ function selectOption(option){
     
     const dialogueBox = document.querySelector('#dialogueBox');
     const optionID = option.getAttribute('id');
-    dialogueBox.textContent = `So ${optionID}`;
-    
     recreateNextButton();
     checkOption(optionID);
-    counter = 0;
+    dialogueBox.textContent = selection[0];
+    counter = 1;
     nextButton.addEventListener('click', () => updateDialogue(selection));
 }
   
@@ -177,6 +263,21 @@ function checkCharacter(option){
         case 'character1':
             info = character1;
             break;
+        case 'character2':
+            info = character2;
+            break;
+        case 'character3':
+            info = character3;
+            break;
+        case 'character4':
+            info = Stefan;
+            break;
+        case 'character5':
+            info = character5;
+            break;
+        case 'character6':
+            info = character6;
+            break;
         default: ;
     };
 }
@@ -189,35 +290,15 @@ function checkOption(option){
         case 'option1':
             selection = info.option1;
             break;
+        case 'option2':
+            selection = info.option2;
+            break;
+        case 'option3':
+            selection = info.option3;
+            break;
+        case 'option4':
+            selection = info.option4;
+            break;
         default: ;
     };
 }
-  
-const character0 = {
-    picture: "images/ragdoll.jpg",
-    intro: [
-        'Meow meow meow',
-        'Moo moo moo',
-        'Ruff ruff ruff',
-    ],
-    option0: [
-        'I love you',
-        'You love me',
-        'We are one big inting family',
-    ],
-    option1: [
-        'Pitou',
-        'is the',
-        'cutest cat',
-    ],
-}
-  
-const character1 = {
-    picture: "images/sadCat.jpg",
-    intro: ['idk', 'halp', 'pls'],
-    option0: ['hope', 'this', 'works'],
-    option1: ['I', 'never worked', 'with objects before'],
-}
-  
-let info = character0;
-let selection = info.intro;
