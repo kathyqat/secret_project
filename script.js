@@ -94,15 +94,18 @@ if (userName == 'Kostia'){
 }
 
 function mainPage(){
+    div.setAttribute('id', 'main');
     div.style.backgroundImage = 'none';
     createCharacters(7);
-    addButtonEvents('button', (e) => talkToCharacter(e.target));
+    addButtonEvents('.characters', (e) => talkToCharacter(e.target));
+    endScreen();
 }
   
 function easterEgg(){
     //I love you, cutie <3
     createCharacters(2);
-    addButtonEvents('button', (e) => talkToCharacter(e.target));
+    addButtonEvents('.characters', (e) => talkToCharacter(e.target));
+    endScreen();
 }
   
 function createCharacters(number){
@@ -122,8 +125,37 @@ function addButtonEvents(type, event){
          button.addEventListener('click', event);
     });
 }
+
+function endScreen(){
+    const endButton = document.createElement('button');
+    endButton.setAttribute('id', 'endButton');
+    endButton.textContent = 'Finish';
+    div.appendChild(endButton);
+    
+    endButton.addEventListener('click', () => {
+        removeButtons();
+        div.setAttribute('id', 'endScreen');
+        
+        const p1 = document.createElement('p');
+        p1.setAttribute('class', 'endScreen');
+        p1.textContent = 'HAPPY BIRTHDAY, KOSTIA';
+        div.appendChild(p1);
+        
+        const p2 = document.createElement('p');
+        p2.setAttribute('class', 'endScreen');
+        p2.textContent = 'from all of us with love <3';
+        div.appendChild(p2);
+        
+        const a = document.createElement('a');
+        a.setAttribute('id', 'secretLink');
+        a.setAttribute('href', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        a.textContent = 'Secret Link';
+        div.appendChild(a);
+    });
+}
   
 function talkToCharacter(option){
+    div.removeAttribute('id', 'main');
     const characterID = option.getAttribute('id');
     removeButtons();
     backToMain();
@@ -142,6 +174,7 @@ function backToMain(){
     const backButton = document.createElement('button');
     backButton.setAttribute('id', 'backButton');
     backButton.setAttribute('type', 'button');
+    backButton.textContent = '◄';
     div.appendChild(backButton);
     
     backButton.addEventListener('click', () => {
@@ -165,6 +198,7 @@ function skipButton(){
     const skipButton = document.createElement('button');
     skipButton.setAttribute('id', 'skipButton');
     skipButton.setAttribute('type', 'button');
+    skipButton.textContent = '⏭';
     div.appendChild(skipButton);
     skipButton.addEventListener('click', () => skipAll(selection));
 }
@@ -197,6 +231,7 @@ function buildCharacterPage(character){
     const nextButton = document.createElement('button');
     nextButton.setAttribute('id', 'nextButton');
     nextButton.setAttribute('type', 'button');
+    nextButton.textContent = '➡';
     textDiv.appendChild(nextButton);
     nextButton.addEventListener('click', () => updateDialogue(info.intro));
 }
@@ -252,6 +287,7 @@ function recreateNextButton(){
     nextButton = document.createElement('button');
     nextButton.setAttribute('id', 'nextButton');
     nextButton.setAttribute('type', 'button');
+    nextButton.textContent = '➡';
     textDiv.appendChild(nextButton);
 }
   

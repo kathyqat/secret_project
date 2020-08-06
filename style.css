@@ -1,21 +1,30 @@
-#main{
-    height: 90vh;
+:root{
+    font-family: arial;
 }
 
-button{
-    width: 50px;
-    height: 50px;
+.main{
+    height: 95vh;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 50% auto 5%;
+    grid-gap: 5px;
 }
 
 .characters{
-    width: 100px;
-    height: 200px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
+#endButton{
+    grid-area: 3/4/4/5;
+}
+
 #backButton, #skipButton{
+    width: 50px;
     height: 25px;
 }
 
@@ -26,21 +35,20 @@ img{
 }
 
 #small{
-    height: 20vh;
+    height: 25vh;
 }
 
 #text{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #dialogueBox{
-    font-family: arial;
     background-color: white;
-    width: 50vw;
+    width: 60vw;
     padding: 10px;
-    margin: 50px 0;
     border: solid black 2px;
     border-radius: 5px;
 }
@@ -49,6 +57,7 @@ img{
     height: 30px;
     width: 30px;
     border-radius: 50px;
+    font-weight: bold;
 }
 
 #skipButton{
@@ -56,13 +65,45 @@ img{
     margin: auto;
 }
 
-.options{
-    width: 90vw;
-}
-
 #options{
     padding: 20px;
     display: grid;
     grid-gap: 10px;
     justify-items: center;
+}
+
+.options{
+    width: 90vw;
+    height: 40px;
+}
+
+#endScreen{
+    display: grid;
+    grid-template-rows: 50vh 10vh auto;
+    justify-items: center;
+    align-items: end;
+}
+  
+.endScreen{
+    font-size: 40px;
+    animation-name: multicolour;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes multicolour{
+    0% {color: red;}
+    14% {color: orange;}
+    28% {color: yellow;}
+    42% {color: green;}
+    56% {color: blue;}
+    70% {color: indigo;}
+    84% {color: violet;}
+    100% {color: red;}
+}
+
+#secretLink {
+    font-size: 6px;
+    color: green;
+    text-decoration: none;
 }
