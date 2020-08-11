@@ -1,6 +1,139 @@
-const character = {
+const Liana = {
+    name: 'Liana',
+    picture: "images/liana.png",
+    colour: '#99c3b9',
+    intro: [
+        'A wonderful midnight, 25 years ago...',
+        'I met you for the first time!',
+    ],
+    option0: [
+        'You are the most generous kid and you grew up to be a very gentle, fair and generous man.',
+        'I love you so much, Kostia!',
+    ],
+    option1: [
+        'Every memory with you is special for me.',
+        'I really like our trip to Algonquin, 2 years ago.',
+        'Lida and I woke you up (and all the habitants of Mad Masher) when the fire alarm went on when we lit up the candles on your birthday cake.',
+        'Also BBQ, hiking and canoeing in the park.',
+        'I have many stories to share!',
+    ],
+    option2: [
+        'Always.',
+    ],
+    option3: [
+        'Спасибо, князь.',
+        'Вы настоящий дворянин.',
+        'И программист.',
+    ],
+    option4: [
+        'Can\'t review you.',
+        'I love you too much.',
+    ],
+};
+
+const Lida = {
+    name: 'Lida',
+    picture: "images/lida.jpg",
+    colour: '#000099',
+    intro: [
+        'Hello, Brat!',
+    ],
+    option0: [
+        'I like your selfless kindness and unshakable sense of justice.',
+        'You also have an awesome memory for small details that most would forget, but never held a grudge on anybody.',
+        'You manage to bring a smile to my face and make me (and those around you) feel better even in the darkest of days.',
+    ],
+    option1: [
+        'From our brother-sister trip to Montreal…',
+        'when we went to see the LI-AAAAEEE-GHTS towards the bridge and met a leprosy-scary lady on the way back!!!',
+    ],
+    option2: [
+        'You help every time when you give me one of your ‘bear’ hugs without making a single comment, just guided by the feeling that I am not doing well.',
+    ],
+    option3: [
+        'Listen to me, your sister is always right.',
+    ],
+    option4: [
+        'Five out of five stars for a steady stream of waggish word-play puns.',
+    ],
+};
+
+const MizzCristall = {
+    name: 'Mizz Cristall',
     picture: "images/stefan2.jpg",
-    colour: 'rgba(0, 240, 12, 0.1)',
+    colour: '#00f00c',
+    intro: [
+        '',
+    ],
+    option0: [
+        '',
+    ],
+    option1: [
+        '',
+    ],
+    option2: [
+        '',
+    ],
+    option3: [
+        '',
+    ],
+    option4: [
+        '',
+    ],
+};
+
+const Anna = {
+    name: '',
+    picture: "images/stefan2.jpg",
+    colour: '#00f00c',
+    intro: [
+        '',
+    ],
+    option0: [
+        '',
+    ],
+    option1: [
+        '',
+    ],
+    option2: [
+        '',
+    ],
+    option3: [
+        '',
+    ],
+    option4: [
+        '',
+    ],
+};
+
+const Josh = {
+    name: 'Josh',
+    picture: "images/stefan2.jpg",
+    colour: '#00f00c',
+    intro: [
+        '',
+    ],
+    option0: [
+        '',
+    ],
+    option1: [
+        '',
+    ],
+    option2: [
+        '',
+    ],
+    option3: [
+        '',
+    ],
+    option4: [
+        '',
+    ],
+};
+
+const Chris = {
+    name: '',
+    picture: "images/stefan2.jpg",
+    colour: '#00f00c',
     intro: [
         '',
     ],
@@ -22,9 +155,9 @@ const character = {
 };
 
 const Stefan = {
-    //#00f00c
+    name: 'Stefan',
     picture: "images/stefan2.jpg",
-    colour: 'linear-gradient(#00f00c, white)',
+    colour: '#00f00c',
     intro: [
         'This is Huge Jackedman, and it\'s not Chris.',
         'I\'m also not huge.',
@@ -42,42 +175,65 @@ const Stefan = {
         'Because you truly listen and have empathy.',
     ],
     option3: [
-        
+        'Running on empty, fooooooooood review!',
     ],
     option4: [
         'I give you a perfect 5/7 score.',
     ],
 };
-  
-const character0 = {
-    picture: "images/ragdoll.jpg",
+
+const Kathy = {
+    name: '',
+    picture: "images/stefan2.jpg",
+    colour: '#00f00c',
     intro: [
-        'Meow meow meow',
-        'Moo moo moo',
-        'Ruff ruff ruff',
+        '',
     ],
     option0: [
-        'I love you',
-        'You love me',
-        'We are one big inting family',
+        '',
     ],
     option1: [
-        'Pitou',
-        'is the',
-        'cutest cat',
+        '',
+    ],
+    option2: [
+        '',
+    ],
+    option3: [
+        '',
+    ],
+    option4: [
+        '',
     ],
 };
-  
-const character1 = {
-    picture: "images/sadCat.jpg",
-    intro: ['idk', 'halp', 'pls'],
-    option0: ['hope', 'this', 'works'],
-    option1: ['I', 'never worked', 'with objects before'],
+
+const Pitou = {
+    name: '',
+    picture: "images/stefan2.jpg",
+    colour: '#00f00c',
+    intro: [
+        '',
+    ],
+    option0: [
+        '',
+    ],
+    option1: [
+        '',
+    ],
+    option2: [
+        '',
+    ],
+    option3: [
+        '',
+    ],
+    option4: [
+        '',
+    ],
 };
 
-const profilePics = [character0.picture, character1.picture, character0.picture, character0.picture, Stefan.picture,];
-  
-let info = character0;
+const profilePics = [Liana.picture, Lida.picture, MizzCristall.picture, Anna.picture, Josh.picture, Chris.picture, Stefan.picture, Kathy.picture, Pitou.picture];
+const profileColours = [Liana.colour, Lida.colour, MizzCristall.colour, Anna.colour, Josh.colour, Chris.colour, Stefan.colour, Kathy.colour, Pitou.colour];
+
+let info = Liana;
 let selection = info.intro;
 let counter = 1;
 
@@ -96,7 +252,7 @@ if (userName == 'Kostia'){
 function mainPage(){
     div.setAttribute('id', 'main');
     div.style.backgroundImage = 'none';
-    createCharacters(7);
+    createCharacters(9);
     addButtonEvents('.characters', (e) => talkToCharacter(e.target));
     endScreen();
 }
@@ -115,6 +271,7 @@ function createCharacters(number){
         button.setAttribute('class', 'characters');
         button.setAttribute('type', 'button');
         button.style.backgroundImage = `url(${profilePics[i]})`;
+        button.style.backgroundColor = profileColours[i];
         div.appendChild(button);
     };
 }
@@ -213,7 +370,7 @@ function skipAll(option){
 function buildCharacterPage(character){
     checkCharacter(character);
     selection = info.intro;
-    div.style.backgroundImage = info.colour;
+    div.style.backgroundImage = `linear-gradient(${info.colour}, white)`;
     
     const image = document.createElement('img');
     image.setAttribute('src', `${info.picture}`);
@@ -222,6 +379,11 @@ function buildCharacterPage(character){
     const textDiv = document.createElement('div');
     textDiv.setAttribute('id', 'text');
     div.appendChild(textDiv);
+
+    const nameLabel = document.createElement('p');
+    nameLabel.setAttribute('id', 'name');
+    nameLabel.textContent = info.name;
+    textDiv.appendChild(nameLabel);
     
     const dialogueBox = document.createElement('p');
     dialogueBox.setAttribute('id', 'dialogueBox');
@@ -259,6 +421,7 @@ function displayOptions(){
         button.setAttribute('id', `option${i}`);
         button.setAttribute('class', 'options');
         button.setAttribute('type', 'button');
+        button.textContent = options[i];
         optionsDiv.appendChild(button);
     };
     addButtonEvents('.options', (e) => selectOption(e.target));
@@ -294,25 +457,31 @@ function recreateNextButton(){
 function checkCharacter(option){
     switch (option){
         case 'character0':
-            info = character0;
+            info = Liana;
             break;
         case 'character1':
-            info = character1;
+            info = Lida;
             break;
         case 'character2':
-            info = character2;
+            info = MizzCristall;
             break;
         case 'character3':
-            info = character3;
+            info = Anna;
             break;
         case 'character4':
-            info = Stefan;
+            info = Josh;
             break;
         case 'character5':
-            info = character5;
+            info = Chris;
             break;
         case 'character6':
-            info = character6;
+            info = Stefan;
+            break;
+        case 'character7':
+            info = Kathy;
+            break;
+        case 'character8':
+            info = Pitou;
             break;
         default: ;
     };
@@ -338,3 +507,11 @@ function checkOption(option){
         default: ;
     };
 }
+
+const options = [
+    'What do you think of me?',
+    'What is one of your favourite memories?',
+    'Have I ever helped you? Or did I int you?',
+    'Tell me an inside joke.',
+    'For real tho, what do you really think of me?',
+];

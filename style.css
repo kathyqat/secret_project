@@ -1,5 +1,10 @@
 :root{
     font-family: arial;
+    font-size: 16px;
+}
+
+.characters:hover, .options:hover{
+    transform: scale(1.1);
 }
 
 .main{
@@ -8,19 +13,20 @@
 
 #main{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 50% auto 5%;
     grid-gap: 5px;
 }
 
 .characters{
+    border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 #endButton{
-    grid-area: 3/4/4/5;
+    grid-area: 3/5/4/6;
 }
 
 #backButton, #skipButton{
@@ -39,10 +45,21 @@ img{
 }
 
 #text{
+    position: relative;
     margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#name{
+    position: absolute;
+    font-size: 14px;
+    top: -18px;
+    left: 18vw;
+    padding: 1px 5px 1px 5px;
+    background-color: white;
+    border-radius: 50px;
 }
 
 #dialogueBox{
