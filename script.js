@@ -45,7 +45,7 @@ const Lida = {
     ],
     option1: [
         'From our brother-sister trip to Montreal…',
-        'when we went to see the LI-AAAAEEE-GHTS towards the bridge and met a leprosy-scary lady on the way back!!!',
+        'When we went to see the LI-AAAAEEE-GHTS towards the bridge and met a leprosy-scary lady on the way back!!!',
     ],
     option2: [
         'You help every time when you give me one of your ‘bear’ hugs without making a single comment, just guided by the feeling that I am not doing well.',
@@ -60,103 +60,139 @@ const Lida = {
 
 const MizzCristall = {
     name: 'Mizz Cristall',
-    picture: "images/stefan2.jpg",
-    colour: '#00f00c',
+    picture: "images/mizzcristall.png",
+    colour: '#cc27cc',
     intro: [
-        '',
+        'Ferne aka Mizz Cristall sending Kostia ¼ century birthday wishes!',
     ],
     option0: [
-        '',
+        'Your deep sense of justice and crazy sense of humour are Kostia trademarks.',
+        'But I must say that everything about you is fabulous (even when you are infuriated or frustrated).',
     ],
     option1: [
-        '',
+        'I remember your defense of and support for your friend Sam, of any vulnerable person anywhere any time.',
+        'And your enthusiasm and passion for guitar, African drums, computers, Mr. Smith, PCVS.',
+        'And your love of your mom’s cooking.',
     ],
     option2: [
-        '',
+        ' - ',
     ],
     option3: [
-        '',
+        ' - ',
     ],
     option4: [
-        '',
+        'You are such an amazing human, Kostia.',
+        'Hope you have a spectacular 25th birthday.',
     ],
 };
 
 const Anna = {
-    name: '',
-    picture: "images/stefan2.jpg",
-    colour: '#00f00c',
+    name: 'Anna',
+    picture: "images/anna.jpg",
+    colour: '#0015ff',
     intro: [
-        '',
+        'Mama C!',
+        'Sending you a big birthday hug.',
     ],
     option0: [
-        '',
+        'The thing I like best about you is your gentle nature.',
     ],
     option1: [
-        '',
+        'A favourite memory I have is when I took you and Joshua to Sheridan for the first time.',
+        'I think it was your first time having a Starbucks drink too.',
+        'It was a wonderful day with the two boys.',
     ],
     option2: [
-        '',
+        ' - ',
     ],
     option3: [
-        '',
+        ' - ',
     ],
     option4: [
-        '',
+        'I would rate Kostia 4 1/2 stars.',
+        'I wouldn\'t give you a 5 because sometimes you\'re TOO nice LOL!',
     ],
-};
+};      
 
 const Josh = {
     name: 'Josh',
-    picture: "images/stefan2.jpg",
-    colour: '#00f00c',
+    picture: "images/josh2.png",
+    colour: '#538eed',
     intro: [
-        '',
+        'From a math class in Peterborough, to a dorm, to a cat-filled apartment, and back again.',
+        'It\'s your ol\' ball and chain, Josh.',
     ],
     option0: [
-        '',
+        'You are the most genuine and caring person I know.',
+        'I\'ve never met anyone so willing to put their heart into everything they do and every person they meet.',
     ],
     option1: [
-        '',
+        'To this day, one of my favourite memories is when we used to get our math class off, and we would leave school and walk to the guitar shop.',
     ],
     option2: [
-        '',
+        'I don\'t know what I would have done if you didn\'t come to Sheridan with me, especially the early days.',
+        'It was a huge comfort to have you around.',
     ],
     option3: [
-        '',
+        'Kostia is the crusher of dreams.',
     ],
     option4: [
-        '',
+        '5/5 stars, food was good as long as you don\'t order the pasta with ketchup.',
+        'But the service was truly exceptional.',
     ],
 };
 
 const Chris = {
-    name: '',
-    picture: "images/stefan2.jpg",
-    colour: '#00f00c',
+    name: 'Chris',
+    picture: "images/chris1.jpg",
+    colour: '#990000',
     intro: [
-        '',
+        'Kostia my boy, my bro, broski, broseph!',
+        'It\'s your boy, bro, broski, broseph Chris, also known as Thor! ',
     ],
     option0: [
-        '',
-    ],
+        'You\'re my hypeman!',
+        'Playing a game?',
+        'HYPEMAN!',
+        'Going on a roadtrip to do something tedious?',
+        'HYPEMAN!',
+        'Going to spend an entire day in the study lounge to work on a project that you really don\'t want to do?',
+        'HYPEMAN!',
+        'Also your beard and smile though!',
+        'My bearded chaps are the chaps that shaped my college experience and I am grateful to have both of them!',
+    ],  
     option1: [
-        '',
-    ],
+        'Remember that time when Stefan, yourself and myself went on our camping trip and got up to some shenanigans?',
+        'You and Stefan were naturals in that batting cage!',
+        'Late night walks on the beach staring at the stars getting all philosophical for no reason....',
+        'Good times, good times.',
+    ], 
     option2: [
-        '',
-    ],
+        'Anytime I get to spend with this guy I appreciate.',
+        'This guy just always brightens my day.',
+        'If I am going through something, you\'re always willing to set your problems aside for a moment to listen.',
+        'When you\'re going through something, I am throwing aside my problems to listen.',
+        'Just having such a mutual respect for each other makes me want to have you around a lot more!',
+    ],  
     option3: [
-        '',
+        '“Fuck Me Pal” when anything causes the slightest hindrance to our lifestyle.',
+        'We were constantly quoting things.',
+        '“YOU WANNA GO TO WAR BALAKE?! BECAUSE WE COULD GO TO WAR, I\'M FOR REAL.... I\'M FOR REAL.”',
+        'Way too many to list.',
     ],
     option4: [
-        '',
-    ],
+        'Kostia, amazing friend, good listener.',
+        'Will always cheer you up and make your day.',
+        'He\'s a guy you always want around.',
+        '10/10!',
+        'Love You Brother.',
+        'Stay Bearded.',
+    ],    
 };
 
 const Stefan = {
     name: 'Stefan',
-    picture: "images/stefan2.jpg",
+    picture: "images/stefan1.jpg",
     colour: '#00f00c',
     intro: [
         'This is Huge Jackedman, and it\'s not Chris.',
@@ -183,50 +219,84 @@ const Stefan = {
 };
 
 const Kathy = {
-    name: '',
-    picture: "images/stefan2.jpg",
-    colour: '#00f00c',
+    name: 'Kathy',
+    picture: "images/kathy.jpg",
+    colour: '#1e91e3',
     intro: [
-        '',
+        'Hey, Kostia.',
+        'It\'s Kathy from workplace training at the main CNL site.',
+        'Do you want to get some hot chocolate?',
+        'Or we could join a painting class, or go to a party, or watch a movie in Pembroke.',
     ],
     option0: [
-        '',
+        'You\'re such a handsome cutie.',
+        'And the bestest.',
+        'And if I continue on, it will be mushy-gushy and everyone will be able to see it.',
+        'I will say that you have such a positive, warm, silly demeanor, and you have both traditional and emotional intelligence.',
+        'You\'re easy to talk to and able strike up conversation with any person, because you\'re that friendly.',
+        'I also love when you talk passionately about a subject; you can go into such detail and I love listening to you.',
     ],
     option1: [
-        '',
+        'Any one of our major dates.',
+        'Our first one was when we went to a special celestial art exhibit at AGO.',
+        'I loved looking at and contemplating the beautiful artwork with you.',
+        'It was such a feeling of serenity.',
+        'Or when we went to Centre Island last year, and tandem-biked all around the island.',
+        'I love spending time with you in general, because you\'re my favourite person.',
+        'You make something as mundane as getting groceries to be enjoyable.',
     ],
     option2: [
-        '',
+        'You int all my games.',
+        'But you carry me in real life.',
+        'You have been the biggest help, maybe more than you know.',
+        'I\'m forever grateful and I want to be the carry for you when you need it.',
     ],
     option3: [
-        '',
+        'We\'ve had so many over the years, it\'s hard to pick just one.',
+        'Some of it is just random, silly noises.',
+        'Or when we start a feedback loop of laughing really hard together.',
+        'OH OK, I got one!',
+        'Tyler1 workout animation.',
+        '"LET\'S GOOOOO!!!!!"',
+        '"WOOF WOOF WOOF WOOF WOOF WOOF"',
+        '"MOO MOO MOO MOO MOO"',
     ],
     option4: [
-        '',
+        'Can\'t use the obvious number, so...',
+        '420/420 eyyyyyy, smoke weed everyday.',
+        'Actually my number one homie.',
     ],
 };
 
 const Pitou = {
-    name: '',
-    picture: "images/stefan2.jpg",
-    colour: '#00f00c',
+    name: 'Pitou',
+    picture: "images/pitou2.jpg",
+    colour: '#bc76e8',
     intro: [
-        '',
+        'Meow.',
     ],
     option0: [
-        '',
+        'Meow meow meow.',
+        'Meow.',
+        '*grooms butt*',
     ],
     option1: [
-        '',
+        'Meerrrrrrrrrrrooow!',
+        '*zooms after toy*',
     ],
     option2: [
-        '',
+        'Meooooow!',
+        'Meooooooooooow!',
+        '*taps*',
+        '*flops*',
     ],
     option3: [
-        '',
+        '*drops huge stink bomb*',
+        '*zooms away*',
     ],
     option4: [
-        '',
+        '*purring*',
+        '*more purring*',
     ],
 };
 
@@ -237,14 +307,14 @@ let info = Liana;
 let selection = info.intro;
 let counter = 1;
 
-// const userName = window.prompt("What is your name?");
-const userName = 'Kostia';
+const userName = window.prompt("What is your name?");
+// const userName = 'Kostia';
 const div = document.querySelector('div');
 
 if (userName == 'Kostia'){
     mainPage();
-} else if (userName == 'CapySloth'){
-    easterEgg();
+// } else if (userName == 'CapySloth'){
+//     easterEgg();
 } else {
     alert('You are not the birthday boy I\'m looking for');
 }
