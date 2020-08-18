@@ -307,8 +307,8 @@ let info = Liana;
 let selection = info.intro;
 let counter = 1;
 
-const userName = window.prompt("What is your name?");
-// const userName = 'Kostia';
+// const userName = window.prompt("What is your name?");
+const userName = 'Kostia';
 const div = document.querySelector('div');
 
 if (userName == 'Kostia'){
@@ -431,10 +431,13 @@ function skipButton(){
 }
   
 function skipAll(option){
-    counter = option.length - 1;
-    dialogueBox.textContent = option[counter];
-    counter++;
-    updateDialogue(option);
+    const optionsDiv = document.querySelector('#options');
+    if (!optionsDiv){
+        counter = option.length - 1;
+        dialogueBox.textContent = option[counter];
+        counter++;
+        updateDialogue(option);
+    };
 }
   
 function buildCharacterPage(character){
@@ -482,6 +485,8 @@ function updateDialogue(option){
 }
   
 function displayOptions(){
+    div.setAttribute('id', 'optionsMenu');
+
     const optionsDiv = document.createElement('div');
     optionsDiv.setAttribute('id', 'options');
     div.appendChild(optionsDiv);
