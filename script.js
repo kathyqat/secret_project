@@ -307,8 +307,8 @@ let info = Liana;
 let selection = info.intro;
 let counter = 1;
 
-// const userName = window.prompt("What is your name?");
-const userName = 'Kostia';
+const userName = window.prompt("What is your name?");
+// const userName = 'Kostia';
 const div = document.querySelector('div');
 
 if (userName == 'Kostia'){

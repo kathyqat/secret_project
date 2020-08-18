@@ -68,7 +68,7 @@ img{
     position: absolute;
     font-size: 2.25vh;
     top: -2.5vh;
-    left: 22vw;
+    left: 21vw;
     padding: 0.2vh 0.6vmax 0.2vh 0.6vmax;
     background-color: white;
     border-radius: 5vmax;
@@ -142,6 +142,7 @@ img{
 
 @media only screen and (max-device-width: 769px){
     #main{
+        height: 90vh;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 30% 30% auto 5%;
@@ -151,5 +152,11 @@ img{
 
     #endButton{
         grid-area: 4/3/5/4;
+    }
+
+    #name{
+        position: absolute;
+        top: -2.2vh;
+        left: 17vw;
     }
 }
